@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SABENZOVA | Online Shopping</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #222;
+}
+header {
+  background: #17152b;
+  color: white;
+  padding: 22px 15px;
+  text-align: center;
+}
+header h1 {
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+header p {
+  margin-top: 8px;
+  color: #ddd;
+}
+nav {
+  background: #292544;
+  padding: 13px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+.hero {
+  padding: 55px 20px;
+  text-align: center;
+  background: linear-gradient(135deg,#292544,#7663a9);
+  color: white;
+}
+.hero h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+.hero p {
+  margin-bottom: 20px;
+}
+.hero a {
+  display: inline-block;
+  background: white;
+  color: #292544;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+h2.section {
+  text-align: center;
+  margin: 30px 0 20px;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 14px;
+  padding: 15px;
+}
+.product {
+  background: white;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px #ddd;
+}
+.product .emoji {
+  font-size: 55px;
+  padding: 18px;
+  background: #f0edf7;
+  border-radius: 8px;
+}
+.product h3 {
+  margin: 12px 0 7px;
+}
+.price {
+  color: #6c45a0;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+button {
+  border: 0;
+  background: #292544;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+footer {
+  background: #17152b;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>SABENZOVA</h1>
+  <p>Your Style, Your World</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#products">Products</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+  <h2>Welcome to SABENZOVA</h2>
+  <p>Discover Fashion, Beauty, Electronics & More!</p>
+  <a href="#products">Shop Now</a>
+</section>
+
+<h2 class="section" id="products">Our Products</h2>
+
+<div class="products">
+
+  <div class="product">
+    <div class="emoji">👕</div>
+    <h3>Fashion</h3>
+    <p class="price">Starting ₹299</p>
+    <button onclick="addCart('Fashion')">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <div class="emoji">👟</div>
+    <h3>Shoes</h3>
+    <p class="price">Starting ₹499</p>
+    <button onclick="addCart('Shoes')">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <div class="emoji">⌚</div>
+    <h3>Watches</h3>
+    <p class="price">Starting ₹399</p>
+    <button onclick="addCart('Watches')">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <div class="emoji">🎧</div>
+    <h3>Electronics</h3>
+    <p class="price">Starting ₹299</p>
+    <button onclick="addCart('Electronics')">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <div class="emoji">💄</div>
+    <h3>Beauty</h3>
+    <p class="price">Starting ₹199</p>
+    <button onclick="addCart('Beauty')">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <div class="emoji">🏠</div>
+    <h3>Home & Kitchen</h3>
+    <p class="price">Starting ₹249</p>
+    <button onclick="addCart('Home & Kitchen')">Add to Cart</button>
+  </div>
+
+</div>
+
+<h2 class="section">🛒 Cart: <span id="count">0</span></h2>
+
+<footer id="contact">
+  <h3>SABENZOVA</h3>
+  <p>Your Style, Your World</p>
+  <p>Online Shopping Across India</p>
+  <p>Contact: Your business email coming soon</p>
+  <p>© 2026 SABENZOVA</p>
+</footer>
+
+<script>
+let count = 0;
+
+function addCart(product) {
+  count++;
+  document.getElementById("count").innerText = count;
+  alert(product + " added to cart!");
+}
+</script>
+
+</body>
+</html>
