@@ -316,10 +316,10 @@ async function loadProducts(){
      <b class="tag">${escapeHTML(p.category || "NEW FIND")}</b>
     </div>
     <div class="product-info">
-     <h3>${escapeHTML(p.name)}</h3>
+          <h3>${escapeHTML(p.name)}</h3>
      <p>${escapeHTML(p.description || p.category || "SABENZOVA collection")}</p>
      <div class="product-price">₹${Number(p.price || 0).toLocaleString("en-IN")}</div>
-     <p>Stock: ${Number(p.stock || 0)}</p>
+     <p>Available colours: ${escapeHTML(p.colors || "Contact us")}</p>
      <button class="add" onclick="addToBag('${escapeHTML(p.name).replace(/'/g,"&#039;")}')">
       Add to bag +
      </button>
