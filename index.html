@@ -205,9 +205,10 @@ h1{letter-spacing:-3px}.categories,.products{grid-template-columns:repeat(2,1fr)
 <div id="dashboard" class="hidden">
 <p class="status" id="adminStatus">You are logged in.</p>
 <h3 id="formTitle">Add a new product</h3>
-<form id="productForm" class="admin-form">
-<input id="pName" type="text" placeholder="Product name" required>
+<form id="productForm" class="admin-form"
+ <input id="pName" type="text" placeholder="Product name" required>
 <input id="pCategory" type="text" placeholder="Category" required>
+<input id="pColors" type="text" placeholder="Available colours (Black, White, Blue)">
 <input id="pPrice" type="number" min="0" step="0.01" placeholder="Selling price (INR)" required>
 <input id="pCost" type="number" min="0" step="0.01" placeholder="Cost price (INR)" required>
 <input id="pStock" type="number" min="0" step="1" placeholder="Stock quantity" required>
