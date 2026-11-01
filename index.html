@@ -289,7 +289,7 @@ async function loadProducts(){
   .order("created_at",{ascending:false});
 
  if(error){
-  grid.innerHTML = "<p>Products could not be loaded. Please check your Supabase connection and RLS policies.</p>";
+  grid.innerHTML = "<p>Products could not be loaded: " + escapeHTML(error.message) + "</p>";
   label.textContent = "Connection issue";
   console.error(error);
   return;
