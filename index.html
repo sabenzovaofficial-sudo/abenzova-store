@@ -422,7 +422,7 @@ const price = Number(document.getElementById("pPrice").value);
    image_url = await uploadProductImage(file);
   }
 
-  const productData = {name,category,price,cost_price,stock,description};
+  const productData = {name,category,price,cost_price,stock,description,colors};
   if(image_url) productData.image_url = image_url;
 
   let result;
