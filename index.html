@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,15 +6,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Discover considered style, smart essentials and everyday finds at SABENZOVA.">
 <title>SABENZOVA — Find Your Next Favourite</title>
+
 <style>
 :root{--ink:#17231f;--paper:#f5f2e9;--cream:#fffdf7;--green:#c8e36a;--orange:#f08b62;--muted:#6e7770;--line:#d9ddd2}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
-a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
-.topline{background:var(--ink);color:#fff;padding:10px 16px;text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+.topline{background:var(--ink);color:white;padding:10px 16px;text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase}
 header{max-width:1240px;margin:auto;padding:22px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .logo{font-size:25px;font-weight:900;letter-spacing:3px}.logo span{color:#78952e}
 nav{display:flex;gap:25px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
-.actions{display:flex;gap:10px}.iconbtn{border:1px solid var(--line);background:transparent;border-radius:50px;padding:10px 15px;font-size:12px}
+.actions{display:flex;gap:10px}
+.iconbtn{border:1px solid var(--line);background:transparent;border-radius:50px;padding:10px 15px;font-size:12px}
 .hero{max-width:1240px;margin:0 auto;padding:10px 5% 55px;display:grid;grid-template-columns:1.05fr .95fr;gap:24px}
 .hero-copy{background:var(--green);border-radius:8px;padding:clamp(30px,6vw,76px);display:flex;flex-direction:column;justify-content:center;min-height:480px;position:relative;overflow:hidden}
 .kicker{font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:800}
@@ -32,44 +38,110 @@ h2{font-size:clamp(30px,4vw,48px);letter-spacing:-2px;margin:9px 0 0}
 .textlink{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:5px}
 .categories{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .cat{min-height:190px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;border-radius:7px;transition:transform .2s}
-.cat:hover{transform:translateY(-5px)}.cat:nth-child(1){background:#d8e4bb}.cat:nth-child(2){background:#edc5b3}.cat:nth-child(3){background:#d7d5ed}.cat:nth-child(4){background:#e7d99f}
-.cat small{font-size:10px;letter-spacing:2px;text-transform:uppercase}.cat strong{font-size:23px;letter-spacing:-1px}.cat .arrow{font-size:25px;align-self:flex-end}
+.cat:hover{transform:translateY(-5px)}
+.cat:nth-child(1){background:#d8e4bb}.cat:nth-child(2){background:#edc5b3}.cat:nth-child(3){background:#d7d5ed}.cat:nth-child(4){background:#e7d99f}
+.cat small{font-size:10px;letter-spacing:2px;text-transform:uppercase}
+.cat strong{font-size:23px;letter-spacing:-1px}.cat .arrow{font-size:25px;align-self:flex-end}
 .feature{max-width:1240px;margin:35px auto;padding:0 5%;display:grid;grid-template-columns:1fr 1fr;gap:15px}
 .feature-card{min-height:300px;border-radius:8px;padding:35px;display:flex;flex-direction:column;justify-content:end;overflow:hidden}
 .feature-card:first-child{background:#263b34;color:white}.feature-card:last-child{background:#f0a17f}
-.feature-card h3{font-size:clamp(28px,4vw,44px);letter-spacing:-2px;margin:12px 0}.feature-card p{font-size:13px;line-height:1.6;max-width:330px;opacity:.8}
+.feature-card h3{font-size:clamp(28px,4vw,44px);letter-spacing:-2px;margin:12px 0}
+.feature-card p{font-size:13px;line-height:1.6;max-width:330px;opacity:.8}
 .products{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
 .product{background:var(--cream);border-radius:7px;overflow:hidden}
-.product-art{height:220px;display:grid;place-items:center;position:relative}
+.product-art{height:220px;display:grid;place-items:center;position:relative;background:#e5d7c4}
+.product-art img{width:100%;height:100%;object-fit:cover}
 .product-art span{font-size:70px;filter:drop-shadow(0 10px 8px #0002)}
-.product:nth-child(1) .product-art{background:#e5d7c4}.product:nth-child(2) .product-art{background:#d5dfc7}.product:nth-child(3) .product-art{background:#e9c8bd}.product:nth-child(4) .product-art{background:#d8d5e9}
 .tag{position:absolute;top:13px;left:13px;background:white;padding:7px 9px;font-size:9px;letter-spacing:1px;font-weight:800}
-.product-info{padding:16px}.product-info h3{font-size:14px;margin:0 0 7px}.product-info p{font-size:11px;color:var(--muted);margin:0}
+.product-info{padding:16px}.product-info h3{font-size:14px;margin:0 0 7px}
+.product-info p{font-size:11px;color:var(--muted);margin:0}
+.product-price{font-size:16px;font-weight:800;margin-top:10px}
 .add{margin-top:14px;width:100%;background:transparent;border:1px solid var(--ink);padding:11px;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
 .add:hover{background:var(--ink);color:white}
 .newsletter{max-width:1140px;margin:60px auto 70px;background:var(--green);padding:45px 5%;border-radius:8px;display:flex;align-items:center;justify-content:space-between;gap:25px}
 .newsletter h2{max-width:450px}.newsletter p{font-size:13px;line-height:1.6;max-width:400px}
-.emailform{display:flex;gap:8px;max-width:400px;width:100%}.emailform input{min-width:0;flex:1;padding:14px;border:1px solid #9dad6d;background:#ffffffa8;outline:none}.emailform button{background:var(--ink);color:white;border:0;padding:0 18px;font-size:10px;font-weight:800;letter-spacing:1px}
-footer{background:var(--ink);color:white;padding:42px 5% 25px}.footinner{max-width:1140px;margin:auto;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.footinner p{font-size:12px;color:#c1c9c2;line-height:1.7;max-width:300px}.footlinks{display:flex;gap:22px;flex-wrap:wrap;font-size:11px;color:#dce1dc}.copyright{max-width:1140px;margin:30px auto 0;border-top:1px solid #45524c;padding-top:18px;color:#aeb9b1;font-size:10px}
+.emailform{display:flex;gap:8px;max-width:400px;width:100%}
+.emailform input{min-width:0;flex:1;padding:14px;border:1px solid #9dad6d;background:#ffffffa8;outline:none}
+.emailform button{background:var(--ink);color:white;border:0;padding:0 18px;font-size:10px;font-weight:800;letter-spacing:1px}
+footer{background:var(--ink);color:white;padding:42px 5% 25px}
+.footinner{max-width:1140px;margin:auto;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.footinner p{font-size:12px;color:#c1c9c2;line-height:1.7;max-width:300px}
+.footlinks{display:flex;gap:22px;flex-wrap:wrap;font-size:11px;color:#dce1dc}
+.copyright{max-width:1140px;margin:30px auto 0;border-top:1px solid #45524c;padding-top:18px;color:#aeb9b1;font-size:10px}
 #cartCount{display:inline-grid;place-items:center;background:var(--green);color:var(--ink);border-radius:50%;width:18px;height:18px;font-weight:900;margin-left:4px}
-@media(max-width:760px){header{flex-wrap:wrap}nav{order:3;width:100%;overflow:auto;gap:18px;padding:10px 0} .hero{grid-template-columns:1fr}.hero-copy,.hero-art{min-height:390px}h1{letter-spacing:-3px}.categories,.products{grid-template-columns:repeat(2,1fr)}.feature{grid-template-columns:1fr}.newsletter{margin:35px 5%;display:block}.emailform{margin-top:20px}}
+
+/* ADMIN PANEL */
+.admin-section{max-width:1100px;margin:45px auto;padding:25px 5%;display:none}
+.admin-box{background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:25px}
+.admin-box h2{font-size:30px;margin-bottom:20px}
+.admin-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.admin-form input,.admin-form textarea,.admin-form select{width:100%;padding:13px;border:1px solid var(--line);background:white;border-radius:5px;font:14px Arial}
+.admin-form textarea{grid-column:1/-1;min-height:90px}
+.admin-form .full{grid-column:1/-1}
+.admin-button{background:var(--ink);color:white;border:0;padding:13px 18px;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;border-radius:4px}
+.admin-button.secondary{background:#e5e9dc;color:var(--ink)}
+.admin-button.danger{background:#a53b30}
+.admin-buttons{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.admin-list{margin-top:25px}
+.admin-item{border-top:1px solid var(--line);padding:14px 0;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.admin-item small{display:block;color:var(--muted);margin-top:5px}
+.admin-item img{width:55px;height:55px;object-fit:cover;border-radius:5px}
+.admin-item-actions{display:flex;gap:6px;flex-wrap:wrap}
+.status{font-size:13px;margin:12px 0;color:#526c25}
+.admin-link{font-size:10px;color:#c1c9c2;text-decoration:underline}
+.hidden{display:none!important}
+@media(max-width:760px){
+header{flex-wrap:wrap}nav{order:3;width:100%;overflow:auto;gap:18px;padding:10px 0}
+.hero{grid-template-columns:1fr}.hero-copy,.hero-art{min-height:390px}
+h1{letter-spacing:-3px}.categories,.products{grid-template-columns:repeat(2,1fr)}
+.feature{grid-template-columns:1fr}.newsletter{margin:35px 5%;display:block}
+.emailform{margin-top:20px}
+}
+@media(max-width:500px){
+.admin-form{grid-template-columns:1fr}
+.admin-form textarea,.admin-form .full{grid-column:1}
+.admin-item{align-items:flex-start;flex-wrap:wrap}
+}
 @media(max-width:390px){.categories,.products{grid-template-columns:1fr}.product-art{height:190px}.actions{margin-left:auto}}
 </style>
 </head>
+
 <body>
 <div class="topline">A little something new, every day · Welcome to SABENZOVA</div>
+
 <header>
 <a class="logo" href="#">SABEN<span>Z</span>OVA</a>
-<nav><a href="#categories">Categories</a><a href="#edit">New finds</a><a href="#products">Shop</a><a href="#story">Our story</a></nav>
-<div class="actions"><button class="iconbtn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Explore</button><button class="iconbtn" aria-label="Cart">Bag <span id="cartCount">0</span></button></div>
+<nav>
+<a href="#categories">Categories</a>
+<a href="#edit">New finds</a>
+<a href="#products">Shop</a>
+<a href="#story">Our story</a>
+</nav>
+<div class="actions">
+<button class="iconbtn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Explore</button>
+<button class="iconbtn" aria-label="Cart">Bag <span id="cartCount">0</span></button>
+</div>
 </header>
+
 <main>
 <section class="hero">
-<div class="hero-copy"><div class="kicker">The everyday edit / 01</div><h1>Find your<br>next favourite.</h1><p>Fresh style, clever essentials and little upgrades for the way you live. Discover a world of finds, all in one place.</p><a class="cta" href="#categories">Explore the collection ↗</a></div>
-<div class="hero-art" aria-label="Abstract fashion-inspired artwork"><div class="sun"></div><div class="shape"></div><div class="art-label">GOOD FINDS. GOOD FEELING.</div></div>
+<div class="hero-copy">
+<div class="kicker">The everyday edit / 01</div>
+<h1>Find your<br>next favourite.</h1>
+<p>Fresh style, clever essentials and little upgrades for the way you live. Discover a world of finds, all in one place.</p>
+<a class="cta" href="#categories">Explore the collection ↗</a>
+</div>
+<div class="hero-art" aria-label="Abstract fashion-inspired artwork">
+<div class="sun"></div><div class="shape"></div>
+<div class="art-label">GOOD FINDS. GOOD FEELING.</div>
+</div>
 </section>
+
 <section class="section" id="categories">
-<div class="section-head"><div><div class="eyebrow">Browse your mood</div><h2>What are you into?</h2></div><a class="textlink" href="#products">View everything ↗</a></div>
+<div class="section-head">
+<div><div class="eyebrow">Browse your mood</div><h2>What are you into?</h2></div>
+<a class="textlink" href="#products">View everything ↗</a>
+</div>
 <div class="categories">
 <a class="cat" href="#products"><small>01 / Everyday style</small><strong>Fashion & shoes</strong><span class="arrow">↗</span></a>
 <a class="cat" href="#products"><small>02 / Little details</small><strong>Watches & accessories</strong><span class="arrow">↗</span></a>
@@ -77,25 +149,384 @@ footer{background:var(--ink);color:white;padding:42px 5% 25px}.footinner{max-wid
 <a class="cat" href="#products"><small>04 / Feel-good finds</small><strong>Beauty & home</strong><span class="arrow">↗</span></a>
 </div>
 </section>
+
 <section class="feature" id="edit">
-<div class="feature-card"><div class="eyebrow" style="color:#c8e36a">The considered edit</div><h3>Less ordinary.<br>More you.</h3><p>Explore pieces that bring personality to your everyday routine.</p><a class="textlink" href="#products" style="color:white;width:max-content">Discover the edit ↗</a></div>
-<div class="feature-card"><div class="eyebrow">A fresh perspective</div><h3>Small upgrades.<br>Big energy.</h3><p>From useful tech to finishing touches, find something worth getting excited about.</p><a class="textlink" href="#products" style="width:max-content">See what's new ↗</a></div>
-</section>
-<section class="section" id="products">
-<div class="section-head"><div><div class="eyebrow">A few things to love</div><h2>Popular right now</h2></div><span class="eyebrow">Sample collection</span></div>
-<div class="products">
-<article class="product"><div class="product-art"><span>👜</span><b class="tag">STYLE PICK</b></div><div class="product-info"><h3>Everyday Carry Bag</h3><p>Accessories · Sample item</p><button class="add" onclick="addToBag('Everyday Carry Bag')">Add to bag +</button></div></article>
-<article class="product"><div class="product-art"><span>⌚</span><b class="tag">JUST IN</b></div><div class="product-info"><h3>Minimal Timepiece</h3><p>Watches · Sample item</p><button class="add" onclick="addToBag('Minimal Timepiece')">Add to bag +</button></div></article>
-<article class="product"><div class="product-art"><span>👟</span><b class="tag">DAILY FAVOURITE</b></div><div class="product-info"><h3>City Move Sneakers</h3><p>Footwear · Sample item</p><button class="add" onclick="addToBag('City Move Sneakers')">Add to bag +</button></div></article>
-<article class="product"><div class="product-art"><span>🎧</span><b class="tag">SMART FIND</b></div><div class="product-info"><h3>Wireless Sound Buds</h3><p>Tech · Sample item</p><button class="add" onclick="addToBag('Wireless Sound Buds')">Add to bag +</button></div></article>
+<div class="feature-card">
+<div class="eyebrow" style="color:#c8e36a">The considered edit</div>
+<h3>Less ordinary.<br>More you.</h3>
+<p>Explore pieces that bring personality to your everyday routine.</p>
+<a class="textlink" href="#products" style="color:white;width:max-content">Discover the edit ↗</a>
+</div>
+<div class="feature-card">
+<div class="eyebrow">A fresh perspective</div>
+<h3>Small upgrades.<br>Big energy.</h3>
+<p>From useful tech to finishing touches, find something worth getting excited about.</p>
+<a class="textlink" href="#products" style="width:max-content">See what's new ↗</a>
 </div>
 </section>
-<section class="newsletter" id="story"><div><div class="eyebrow">Stay in the loop</div><h2>Good things are worth a first look.</h2><p>Get updates when new collections and special finds arrive at SABENZOVA.</p></div><form class="emailform" onsubmit="event.preventDefault();alert('Thanks! Newsletter signup is a demo in this preview.');"><input type="email" placeholder="Your email address" required aria-label="Your email address"><button type="submit">SIGN ME UP ↗</button></form></section>
+
+<section class="section" id="products">
+<div class="section-head">
+<div><div class="eyebrow">A few things to love</div><h2>Popular right now</h2></div>
+<span class="eyebrow" id="productLabel">Loading collection...</span>
+</div>
+<div class="products" id="productGrid"></div>
+</section>
+
+<section class="newsletter" id="story">
+<div>
+<div class="eyebrow">Stay in the loop</div>
+<h2>Good things are worth a first look.</h2>
+<p>Get updates when new collections and special finds arrive at SABENZOVA.</p>
+</div>
+<form class="emailform" onsubmit="event.preventDefault();alert('Thank you for your interest!');">
+<input type="email" placeholder="Your email address" required aria-label="Your email address">
+<button type="submit">SIGN ME UP ↗</button>
+</form>
+</section>
 </main>
-<footer><div class="footinner"><div><a class="logo" href="#">SABEN<span>Z</span>OVA</a><p>A curated world of style, essentials and everyday discoveries. Made to help you find your next favourite.</p></div><div class="footlinks"><a href="#categories">Categories</a><a href="#products">Shop</a><a href="#story">About</a><a href="mailto:hello@sabenzova.com">Contact</a></div></div><div class="copyright">© 2026 SABENZOVA. All rights reserved. · Demo storefront preview</div></footer>
+
+<!-- ADMIN PANEL -->
+<section class="admin-section" id="adminPanel">
+<div class="admin-box">
+<h2>SABENZOVA Admin</h2>
+
+<div id="loginArea">
+<p>Admin login</p>
+<div class="admin-form">
+<input id="adminEmail" type="email" placeholder="Admin email" autocomplete="username">
+<input id="adminPassword" type="password" placeholder="Password" autocomplete="current-password">
+</div>
+<div class="admin-buttons">
+<button class="admin-button" onclick="adminLogin()">LOGIN</button>
+</div>
+</div>
+
+<div id="dashboard" class="hidden">
+<p class="status" id="adminStatus">You are logged in.</p>
+<h3 id="formTitle">Add a new product</h3>
+<form id="productForm" class="admin-form">
+<input id="pName" type="text" placeholder="Product name" required>
+<input id="pCategory" type="text" placeholder="Category" required>
+<input id="pPrice" type="number" min="0" step="0.01" placeholder="Selling price (INR)" required>
+<input id="pCost" type="number" min="0" step="0.01" placeholder="Cost price (INR)" required>
+<input id="pStock" type="number" min="0" step="1" placeholder="Stock quantity" required>
+<input id="pImage" type="file" accept="image/*">
+<textarea id="pDescription" placeholder="Product description"></textarea>
+<div class="full">
+<small>Choose a product photo. JPG, PNG or WEBP recommended.</small>
+</div>
+<div class="full admin-buttons">
+<button class="admin-button" type="submit">SAVE PRODUCT</button>
+<button class="admin-button secondary" type="button" onclick="resetProductForm()">CLEAR FORM</button>
+</div>
+</form>
+
+<h3>Products in your store</h3>
+<div class="admin-list" id="adminProductList">Loading products...</div>
+<div class="admin-buttons">
+<button class="admin-button secondary" onclick="loadProducts()">REFRESH PRODUCTS</button>
+<button class="admin-button danger" onclick="adminLogout()">LOG OUT</button>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="footinner">
+<div>
+<a class="logo" href="#">SABEN<span>Z</span>OVA</a>
+<p>A curated world of style, essentials and everyday discoveries. Made to help you find your next favourite.</p>
+</div>
+<div class="footlinks">
+<a href="#categories">Categories</a>
+<a href="#products">Shop</a>
+<a href="#story">About</a>
+<a href="mailto:hello@sabenzova.com">Contact</a>
+<a href="#adminPanel" class="admin-link" onclick="showAdmin()">Admin</a>
+</div>
+</div>
+<div class="copyright">© 2026 SABENZOVA. All rights reserved.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-let bag=0;
-function addToBag(item){bag++;document.getElementById('cartCount').textContent=bag;alert(item+' added to your demo bag. This preview does not take real orders yet.');}
+// SABENZOVA SUPABASE CONNECTION
+const SUPABASE_URL = "https://akoectizxhinzoobxwoii.supabase.co";
+const SUPABASE_KEY = "PASTE_YOUR_NEW_PUBLISHABLE_KEY_HERE";
+
+const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+let bag = 0;
+let editingProductId = null;
+let currentProducts = [];
+
+function escapeHTML(value){
+ return String(value ?? "").replace(/[&<>"']/g, char => ({
+  "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+ }[char]));
+}
+
+function addToBag(item){
+ bag++;
+ document.getElementById("cartCount").textContent = bag;
+ alert(item + " added to your bag. Online checkout is not connected yet.");
+}
+
+function showAdmin(){
+ document.getElementById("adminPanel").style.display = "block";
+ document.getElementById("adminPanel").scrollIntoView({behavior:"smooth"});
+}
+
+async function loadProducts(){
+ const grid = document.getElementById("productGrid");
+ const label = document.getElementById("productLabel");
+ grid.innerHTML = "<p>Loading products...</p>";
+
+ const {data,error} = await db
+  .from("product")
+  .select("*")
+  .order("created_at",{ascending:false});
+
+ if(error){
+  grid.innerHTML = "<p>Products could not be loaded. Please check your Supabase connection and RLS policies.</p>";
+  label.textContent = "Connection issue";
+  console.error(error);
+  return;
+ }
+
+ currentProducts = data || [];
+ label.textContent = currentProducts.length + " products";
+
+ if(currentProducts.length === 0){
+  grid.innerHTML = "<p>No products yet. New products will appear here when added through Admin.</p>";
+  return;
+ }
+
+ grid.innerHTML = currentProducts.map(p => {
+  const image = p.image_url
+   ? `<img src="${escapeHTML(p.image_url)}" alt="${escapeHTML(p.name)}">`
+   : `<span>🛍️</span>`;
+
+  return `
+   <article class="product">
+    <div class="product-art">
+     ${image}
+     <b class="tag">${escapeHTML(p.category || "NEW FIND")}</b>
+    </div>
+    <div class="product-info">
+     <h3>${escapeHTML(p.name)}</h3>
+     <p>${escapeHTML(p.description || p.category || "SABENZOVA collection")}</p>
+     <div class="product-price">₹${Number(p.price || 0).toLocaleString("en-IN")}</div>
+     <p>Stock: ${Number(p.stock || 0)}</p>
+     <button class="add" onclick="addToBag('${escapeHTML(p.name).replace(/'/g,"&#039;")}')">
+      Add to bag +
+     </button>
+    </div>
+   </article>`;
+ }).join("");
+}
+
+async function adminLogin(){
+ const email = document.getElementById("adminEmail").value.trim();
+ const password = document.getElementById("adminPassword").value;
+
+ if(!email || !password){
+  alert("Please enter your email and password.");
+  return;
+ }
+
+ const {data,error} = await db.auth.signInWithPassword({email,password});
+
+ if(error){
+  alert("Login failed: " + error.message);
+  return;
+ }
+
+ document.getElementById("loginArea").classList.add("hidden");
+ document.getElementById("dashboard").classList.remove("hidden");
+ document.getElementById("adminStatus").textContent = "Logged in as " + data.user.email;
+ await loadProducts();
+ await renderAdminProducts();
+}
+
+async function adminLogout(){
+ await db.auth.signOut();
+ document.getElementById("dashboard").classList.add("hidden");
+ document.getElementById("loginArea").classList.remove("hidden");
+ document.getElementById("adminPassword").value = "";
+ resetProductForm();
+}
+
+function resetProductForm(){
+ editingProductId = null;
+ document.getElementById("productForm").reset();
+ document.getElementById("formTitle").textContent = "Add a new product";
+}
+
+async function uploadProductImage(file){
+ if(!file) return null;
+
+ const extension = file.name.split(".").pop().toLowerCase();
+ const safeExtension = /^[a-z0-9]+$/.test(extension) ? extension : "jpg";
+ const filePath = Date.now() + "-" + Math.random().toString(36).slice(2) + "." + safeExtension;
+
+ const {error} = await db.storage
+  .from("product-images")
+  .upload(filePath,file,{upsert:false,contentType:file.type});
+
+ if(error) throw error;
+
+ const {data} = db.storage
+  .from("product-images")
+  .getPublicUrl(filePath);
+
+ return data.publicUrl;
+}
+
+document.getElementById("productForm").addEventListener("submit", async function(event){
+ event.preventDefault();
+
+ const {data:{user}} = await db.auth.getUser();
+ if(!user){
+  alert("Please log in again.");
+  return;
+ }
+
+ const name = document.getElementById("pName").value.trim();
+ const category = document.getElementById("pCategory").value.trim();
+ const price = Number(document.getElementById("pPrice").value);
+ const cost_price = Number(document.getElementById("pCost").value);
+ const stock = Number(document.getElementById("pStock").value);
+ const description = document.getElementById("pDescription").value.trim();
+ const file = document.getElementById("pImage").files[0];
+
+ if(price < 0 || cost_price < 0 || stock < 0){
+  alert("Please enter valid prices and stock.");
+  return;
+ }
+
+ const saveButton = document.querySelector('#productForm button[type="submit"]');
+ saveButton.disabled = true;
+ saveButton.textContent = "SAVING...";
+
+ try{
+  let image_url = null;
+
+  if(file){
+   if(file.size > 5 * 1024 * 1024){
+    throw new Error("Image must be smaller than 5 MB.");
+   }
+   image_url = await uploadProductImage(file);
+  }
+
+  const productData = {name,category,price,cost_price,stock,description};
+  if(image_url) productData.image_url = image_url;
+
+  let result;
+
+  if(editingProductId !== null){
+   result = await db.from("product")
+    .update(productData)
+    .eq("id",editingProductId);
+  }else{
+   result = await db.from("product").insert(productData);
+  }
+
+  if(result.error) throw result.error;
+
+  alert("Product saved successfully!");
+  resetProductForm();
+  await loadProducts();
+  await renderAdminProducts();
+
+ }catch(error){
+  alert("Could not save product: " + error.message);
+  console.error(error);
+ }finally{
+  saveButton.disabled = false;
+  saveButton.textContent = "SAVE PRODUCT";
+ }
+});
+
+async function renderAdminProducts(){
+ const list = document.getElementById("adminProductList");
+ const {data,error} = await db.from("product").select("*").order("created_at",{ascending:false});
+
+ if(error){
+  list.textContent = "Could not load admin products: " + error.message;
+  return;
+ }
+
+ if(!data || data.length === 0){
+  list.innerHTML = "<p>No products added yet.</p>";
+  return;
+ }
+
+ list.innerHTML = data.map(p => `
+  <div class="admin-item">
+   <div style="display:flex;gap:12px;align-items:center">
+    ${p.image_url ? `<img src="${escapeHTML(p.image_url)}" alt="">` : `<div style="width:55px;height:55px;background:#e5d7c4;display:grid;place-items:center">🛍️</div>`}
+    <div>
+     <strong>${escapeHTML(p.name)}</strong>
+     <small>₹${Number(p.price).toLocaleString("en-IN")} · Stock: ${Number(p.stock)}</small>
+    </div>
+   </div>
+   <div class="admin-item-actions">
+    <button class="admin-button secondary" onclick="editProduct(${Number(p.id)})">EDIT</button>
+    <button class="admin-button danger" onclick="deleteProduct(${Number(p.id)})">DELETE</button>
+   </div>
+  </div>
+ `).join("");
+}
+
+async function editProduct(id){
+ const product = currentProducts.find(p => String(p.id) === String(id));
+ if(!product){
+  alert("Product not found. Refresh the list.");
+  return;
+ }
+
+ editingProductId = product.id;
+ document.getElementById("pName").value = product.name || "";
+ document.getElementById("pCategory").value = product.category || "";
+ document.getElementById("pPrice").value = product.price || 0;
+ document.getElementById("pCost").value = product.cost_price || 0;
+ document.getElementById("pStock").value = product.stock || 0;
+ document.getElementById("pDescription").value = product.description || "";
+ document.getElementById("pImage").value = "";
+ document.getElementById("formTitle").textContent = "Edit product";
+ document.getElementById("adminPanel").scrollIntoView({behavior:"smooth"});
+}
+
+async function deleteProduct(id){
+ if(!confirm("Are you sure you want to delete this product?")) return;
+
+ const {error} = await db.from("product").delete().eq("id",id);
+ if(error){
+  alert("Delete failed: " + error.message);
+  return;
+ }
+
+ alert("Product deleted.");
+ await loadProducts();
+ await renderAdminProducts();
+}
+
+// Keep the existing admin session when the page is refreshed.
+async function checkAdminSession(){
+ const {data:{session}} = await db.auth.getSession();
+
+ if(session){
+  document.getElementById("loginArea").classList.add("hidden");
+  document.getElementById("dashboard").classList.remove("hidden");
+  document.getElementById("adminStatus").textContent = "Logged in as " + session.user.email;
+  await renderAdminProducts();
+ }
+}
+
+loadProducts();
+checkAdminSession();
 </script>
 </body>
 </html>
