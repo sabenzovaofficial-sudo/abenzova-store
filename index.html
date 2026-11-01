@@ -489,9 +489,10 @@ async function editProduct(id){
   return;
  }
 
- editingProductId = product.id;
+  editingProductId = product.id;
  document.getElementById("pName").value = product.name || "";
  document.getElementById("pCategory").value = product.category || "";
+ document.getElementById("pColors").value = product.colors || "";
  document.getElementById("pPrice").value = product.price || 0;
  document.getElementById("pCost").value = product.cost_price || 0;
  document.getElementById("pStock").value = product.stock || 0;
